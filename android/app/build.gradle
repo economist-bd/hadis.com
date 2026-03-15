@@ -6,8 +6,8 @@ plugins {
 
 android {
     namespace "com.example.finance_tips"
-    compileSdkVersion flutter.compileSdkVersion
-    ndkVersion flutter.ndkVersion
+    compileSdkVersion 34
+    ndkVersion "27.0.12077973"
 
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_17
@@ -20,15 +20,17 @@ android {
 
     defaultConfig {
         applicationId "com.example.finance_tips"
-        minSdkVersion flutter.minSdkVersion
-        targetSdkVersion flutter.targetSdkVersion
-        versionCode flutter.versionCode
-        versionName flutter.versionName
+        minSdkVersion 21
+        targetSdkVersion 34
+        versionCode 1        // ✅ hardcode
+        versionName "1.0"    // ✅ hardcode
     }
 
     buildTypes {
         release {
             signingConfig signingConfigs.debug
+            minifyEnabled false
+            shrinkResources false
         }
     }
 }
